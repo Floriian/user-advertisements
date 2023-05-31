@@ -2,7 +2,7 @@
 class AdvertisementsModel {
     private $db;
 
-    public __construct() {
+    public function __construct() {
         $this->db = Database::getDatabase();
     }
 
@@ -21,7 +21,7 @@ class AdvertisementsModel {
      * @param name Username
      */
     public static function getAdvertisement($id) {
-        $sql = "SELECT * FROM `advertisements` WHERE `id`='$id'"
+        $sql = "SELECT * FROM `advertisements` WHERE `id`='$id'";
         $result = mysqli_query($this->$db, $sql)->fetch_array(MYSQLI_ASSOC);
         return $result;
     }
