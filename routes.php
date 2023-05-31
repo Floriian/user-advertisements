@@ -8,6 +8,8 @@ if($uri === '/') {
     require_once('src/views/index.php');
 }elseif($uri === '/users') {
     UserController::findAll();
+}elseif($uri === '/advertisements') {
+    AdvertisementsController::findAll();
 }
 
 ?>
