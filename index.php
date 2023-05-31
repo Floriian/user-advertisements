@@ -2,7 +2,9 @@
 require_once("database.php");
 require_once("models/user.model.php");
 
-echo phpinfo();
+$users = UserModel::getUsers();
+foreach($users as &$user) {
+    echo $user;
+}
 
-print(UserModel::getUsers());
 ?>

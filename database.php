@@ -5,7 +5,7 @@ class Database {
     public static function getDatabase() {
         if (!isset(self::$database)) {
             try {
-                self::$database = new mysqli("database", "root", "rootpassword", "appdatabase");
+                self::$database = new mysqli("mysql_database", "root", "rootpassword", "appdatabase");
             } catch (Exception $e) {
                 die("Error when trying to connect to the database.");
             }
