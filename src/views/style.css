@@ -1,0 +1,28 @@
+body {
+    background-color: #FFFDFA;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 200px;
+
+
+    border: 2px solid #f0f0f0;
+    border-radius: .5rem;
+
+    padding: 1.5rem;
+
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text {
+    font-size: 1.25rem;
+}
