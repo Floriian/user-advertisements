@@ -9,10 +9,16 @@ class AdvertisementsModel {
     /**
      * It returns all advertisements from database.
      */
-    public static function getAdvertisements() {
+    public function getAdvertisements() {
         
-        $sql = "SELECT * FROM `advertisements`";
-        $result = mysqli_query($this->$db, $sql)->fetch_array(MYSQLI_ASSOC);
+        $sql = "SELECT title,name FROM advertisements INNER JOIN users";
+        $result = $this->db->query($sql);
+        $advertisements = array();
+
+        while($row = $result->fetch_array(MYSQLI_ASSOC)) {
+            $advertisements[] = $row;
+        }
+
         return $result;
     }
 
@@ -20,7 +26,7 @@ class AdvertisementsModel {
      * It returns one advertisement by id from database. 
      * @param name Username
      */
-    public static function getAdvertisement($id) {
+    public function getAdvertisement($id) {
         $sql = "SELECT * FROM `advertisements` WHERE `id`='$id'";
         $result = mysqli_query($this->$db, $sql)->fetch_array(MYSQLI_ASSOC);
         return $result;
@@ -30,7 +36,7 @@ class AdvertisementsModel {
      * It returns users advertisements by user's name.
      * @param id User's ID.
      */
-    public static function getUserAdvertisements($id) {
+    public function getUserAdvertisements($id) {
         $user = UserModel::getUserById($id);
         $userID = $user['id'];
 
