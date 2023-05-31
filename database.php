@@ -1,16 +1,16 @@
 <?php
 class Database {
-    private $database;
+    private static $database;
 
-    public static function dbInstance() {
-        if(!isset($this->database)) {
+    public static function getDatabase() {
+        if (!isset(self::$database)) {
             try {
-                $this->database = new mysqli("database", "root", "rootpassword", "appdatabase");
-            } catch(Exception $e) {
-                die("Error when trying connect to database.");
+                self::$database = new mysqli("database", "root", "rootpassword", "appdatabase");
+            } catch (Exception $e) {
+                die("Error when trying to connect to the database.");
             }
         }
-        return $database;
+        return self::$database;
     }
 }
 ?>

@@ -11,7 +11,7 @@ services:
   
   application:
     container_name: application
-    image: php:8.0-apache
+    build: .
     ports:
       - 8000:80
     volumes:
