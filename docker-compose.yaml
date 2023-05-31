@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  database:
+    container_name: mysql_database
+    image: mysql:8.0.33
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=rootpassword
+  
+  application:
+    container_name: application
+    image: php:8.0-apache
+    ports:
+      - 8000:80
+    volumes:
+      - .:/var/www/html
