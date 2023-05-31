@@ -1,10 +1,11 @@
 body {
     background-color: #FFFDFA;
+    margin: 0px;
+    padding: 0px;
 }
 .container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin: 2;
+    padding: 2px;
 }
 
 .box {
@@ -25,4 +26,13 @@ body {
 
 .text {
     font-size: 1.25rem;
+}
+
+.pageSelector {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   min-height: calc(100vh - 1rem);
+   gap: 2rem;
 }
