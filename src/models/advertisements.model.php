@@ -11,7 +11,7 @@ class AdvertisementsModel {
      */
     public function getAdvertisements() {
         
-        $sql = "SELECT title,name FROM advertisements INNER JOIN users";
+        $sql = "SELECT title,name FROM advertisements INNER JOIN users WHERE users.id = advertisements.userid";
         $result = $this->db->query($sql);
         $advertisements = array();
 
