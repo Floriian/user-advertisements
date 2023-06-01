@@ -44,7 +44,7 @@ The database schema looks like this:
 
 The second file (2_create_data.sql) creates data on the MySQL server.
 
-The file name starts with numbers, and after the numbers a short description of what the SQL file does. Please apply the correct sequence.
+The file name starts with numbers, and after the numbers a short description of what the SQL file does. Please apply the correct sequence. If you use docker, it executes automatically in alphabetical order. I think the best practice is to put numbers before the short description.
 
 **SRC folder:**
 
@@ -93,6 +93,8 @@ docker compose up -d
 ```
 
 Please be patient, it takes to the SQL server to start up.
+
+After the docker compose started, you can reach the app in "localhost:8000" address.
 
 **Without Docker**
 
