@@ -2,13 +2,11 @@
 require_once("src/views/header.php");
 ?>
 <div class="pageSelector">
-    <div class="box">
+    <div class="box pageSelectorBox">
         <a href="/users">Users</a>
     </div>
-    <div class="box">
-        <a href="/advertisements">
-            Advertisements
-        </a>
+    <div class="box pageSelectorBox">
+        <a href="/advertisements">Advertisements</a>
     </div>
 </div>
 <?php

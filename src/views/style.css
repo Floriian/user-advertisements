@@ -1,8 +1,23 @@
 body {
+    font-family: Verdana,sans-serif;
     background-color: #FFFDFA;
     margin: 0px;
     padding: 0px;
 }
+
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+a:visited {
+    color: blue;
+}
+
 .container {
     margin: 2;
     padding: 2px;
@@ -24,6 +39,11 @@ body {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.pageSelectorBox:hover {
+    background-color: #b8b8b8;
+    transition: .4s;
+}
+
 .text {
     font-size: 1.25rem;
 }
@@ -37,12 +57,7 @@ body {
    gap: 2rem;
 }
 
-
 .dataContainer {
     display: flex;
     justify-content: center;
-}
-
-h1 {
-    text-align: center;
 }
