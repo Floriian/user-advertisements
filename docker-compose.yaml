@@ -10,7 +10,9 @@ services:
       - MYSQL_ROOT_PASSWORD=rootpassword
     networks:
       - rabit_exam_network
-  
+    volumes:
+      - ./sql/:/docker-entrypoint-initdb.d/
+
   application:
     container_name: application
     build: .
