@@ -36,3 +36,13 @@ body {
    min-height: calc(100vh - 1rem);
    gap: 2rem;
 }
+
+
+.dataContainer {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
