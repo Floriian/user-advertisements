@@ -23,6 +23,8 @@ src
  ┃ ┣ index.php
  ┃ ┗ style.css
  ┃   .htaccess
+ ┃   .database.php
+ ┃   .db_erdiagram.png
  ┃   docker-compose.yaml
  ┃   Dockerfile
  ┃   Documentation.md
@@ -36,7 +38,9 @@ src
 In the "sql" folder there are SQL files, which are required to apply before you going to run the app.
 
 The first file (1_create_database_andtables.sql) creates the database & tables.
-The table schema looks like this:
+The database schema looks like this:
+
+![Database ER Diagram](/db_erdiagram.png)
 
 The second file (2_create_data.sql) creates data on the MySQL server.
 
@@ -53,6 +57,10 @@ It redirects all requests to the "index.php" file. About "index.php" file you ca
 **database.php**
 
 Contains the database connection.
+
+**db_erdiagram.png**
+
+A picture of the database ER Diagram.
 
 **docker-compose.yaml**:
 
