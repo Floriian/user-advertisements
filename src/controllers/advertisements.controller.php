@@ -11,13 +11,5 @@ class AdvertisementsController {
         //Pass $advertisements variable to view.
         require_once(__DIR__ . '/../views/advertisements/index.php');
     }
-
-    /**
-     * It rendes one advertisement.
-     */
-    public static function findOne() {
-        $advertisement = $this->$model->findOne();
-        require_once(__DIR__ . '/../views/advertisements/one.php');
-    }
 }
 ?>

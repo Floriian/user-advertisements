@@ -23,26 +23,6 @@ class UserModel {
 
         return $users;
     }
-
-    /**
-     * It returns one user by username from database. 
-     * @param name Username
-     */
-    public function getUser($name) {
-        $sql = "SELECT * FROM `users` WHERE `name`='$name'";
-        $result = $this->db->query($sql)->fetch_array(MYSQLI_ASSOC);
-        return $result;
-    }
-
-    /**
-     * It returns one user by ID from database
-     * @param id User's ID.
-     */
-    public function getUserById($id) {
-        $sql = "SELECT * FROM `users` WHERE `id`='$name'";
-        $result = $this->db->query($sql)->fetch_array(MYSQLI_ASSOC);
-        return $result;
-    }
 }
 
 ?>

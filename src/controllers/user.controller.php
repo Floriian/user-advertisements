@@ -11,12 +11,6 @@ class UserController {
         //Pass $users variable to users view.
         require_once(__DIR__ . '/../views/users/index.php');
     }
-
-    /**
-     * It renders user page.
-     */
-    public function findOne() {
-    }
 }
 
 ?>
